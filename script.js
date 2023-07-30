@@ -1,19 +1,32 @@
-/* Within the function called "randomNumber", it allows for a two parameters to be passed. One will be the value that is taken from the input from the HTML document. The other is a random number that has been generated.
+/* Within the function called "randomNumber", it allows for a two parameters to be passed. 
+One will be the value that is taken from the input from the HTML document. 
+The other is a random number that has been generated.
     - Include a check to see if the user inputs a value out of scope of the desired values (1-100)
     - It should be compared to a variable named: numberToGuess
 */
+let calledFunction = 0;
 
 function randomNumber(userGuess, computersNumber) {
 
     // YOUR CODE BELOW
+    
+    calledFunction ++;
+      
+     if(userGuess < 1 || userGuess > 100){
+        return"Input does not work"
+       }else if(userGuess < computersNumber){
+       return ` Guess Count: ${calledFunction}, Higher`;
+       } else if (userGuess > computersNumber){
+       return ` Guess Count: ${calledFunction}, Lower`;
+       } else if(userGuess == computersNumber){
+       return` Guess Count: ${calledFunction}, Thats it! the Number was ${computersNumber}`;
+       }
 
-
-
-
+      
     // YOUR CODE ABOVE
 };
 
-
+//randomNumber();
 
 //* Have the Computer Guess your Number ---------------------------------------------
 /* 
@@ -34,7 +47,7 @@ function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
 
     // YOUR CODE ...
-
+    
 
 }
 
