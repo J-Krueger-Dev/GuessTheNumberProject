@@ -65,6 +65,20 @@ function compGuess(reply) {
 
     This should return a string indicating the computers response.
     */
+    switch(reply){
+        case "lower":
+           let lowest = currentNumber < createGuess();
+            return (`Your number is lower? is it ${currentNumber}?`);
+        
+        case "higher":
+           let highest = currentNumber > createGuess();
+            return (`Your number is higher? Is it ${currentNumber}?`);
+        
+        default:
+           
+            return (`I knew it was ${currentNumber}!`)
 
+    }
 }
+compGuess();
 
