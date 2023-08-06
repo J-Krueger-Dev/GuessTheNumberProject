@@ -42,15 +42,20 @@ function randomNumber(userGuess, computersNumber) {
 
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
- let currentNumber = 1;
+ let currentNumber;
+ let lowest = 1
+ let highest = 100
 
  let createGuess = () => {
-    currentNumber = Math.floor((Math.random()* 100)+ 1 );
-    
+   
+    currentNumber = Math.floor((Math.random()*((highest - lowest + 1)) +lowest));
+   
     return currentNumber;
  }
 createGuess()
 
+
+console.log(currentNumber);
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
 
@@ -65,18 +70,26 @@ function compGuess(reply) {
 
     This should return a string indicating the computers response.
     */
+   
+
     switch(reply){
         case "lower":
-           let lowest = currentNumber < createGuess();
+            highest = currentNumber - 1
+      
+           createGuess()
+            
             return (`Your number is lower? is it ${currentNumber}?`);
         
         case "higher":
-           let highest = currentNumber > createGuess();
+            lowest = currentNumber + 1
+            
+           createGuess();
+                 
             return (`Your number is higher? Is it ${currentNumber}?`);
         
         default:
            
-            return (`I knew it was ${currentNumber}!`)
+            return (`I knew it was ${currentNumber}!`);
 
     }
 }

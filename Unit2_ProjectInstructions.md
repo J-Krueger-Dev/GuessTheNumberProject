@@ -151,10 +151,10 @@ Concepts to consider
 ### Ticket: `#U2_05`
 Refactoring your values.
 - **Given** the `Lower` button is clicked.
-- **Then** the `currentValue` should be stored in a new variable called `lowest`.
+- **Then** the `currentNumber` should be stored in a new variable called `lowest`.
 - **And** the `createGues()` should consider this variable.
 - **Given** the `Higher` button is clicked.
-- **Then** the `currentValue` should be stored in a variable called `highest`.
+- **Then** the `currentNumber` should be stored in a variable called `highest`.
 - **And** the `createGues()` should consider this variable.
 
 **Note:** Consider initial values.
